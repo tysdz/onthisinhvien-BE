@@ -1,0 +1,55 @@
+POST  http://localhost:5000/api/auth/register 
+Content-Type:  application/json
+
+{
+    "username":"t1",
+    "password":"t"
+}
+
+###
+POST  http://localhost:5000/api/auth/login
+Content-Type:  application/json
+
+{
+    "username":"w",
+    "password":"w"
+}
+###
+PUT http://localhost:5000/api/auth/change-password/65a4aecfb2658a3348f09c6b
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE0YWVjZmIyNjU4YTMzNDhmMDljNmIiLCJpYXQiOjE3MDUyOTIyMzV9.whxpT79N7he9FoZ8Qg--VJPLze4pLaOhL9okF6Xlkic
+
+{
+    "currentPassword": "t2",
+    "newPassword": "t"
+}
+
+###
+
+POST http://localhost:5000/api/infor
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE1MDk1MmE0MzNmNjQ2NDA2NjcwNTciLCJpYXQiOjE3MDUzMTQ5MDJ9.bFRy9n8rpEgFMg3mICFzIzOIiL6lkVXFm4jMYAB9FE0
+
+{
+    "nameUser":"Nguyễn Tiến Thành 4",
+    "email":"than@gmail.com",
+    "phoneNumber":"02233349"
+}
+###
+
+GET  http://localhost:5000/api/infor
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWE1MDk1MmE0MzNmNjQ2NDA2NjcwNTciLCJpYXQiOjE3MDUzMTQ5MDJ9.bFRy9n8rpEgFMg3mICFzIzOIiL6lkVXFm4jMYAB9FE0
+####
+
+PUT http://localhost:5000/api/infor/658cd6fcb1b3a0086cba0b9d
+Content-Type: application/application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZDZjNmIxYjNhMDA4NmNiYTBiOWMiLCJpYXQiOjE3MDM3Mjg4Mzh9.SjIek6uogBkGQNN8UD3l7PLmZk9R5TxEFa9wMHVLfx4
+
+{
+    "nameUser": "sjdkjf4ewehs",
+    "email": "tha3nh@gmail.com",
+    "phoneNumber": "2343244567",
+}
+####
+DELETE http://localhost:5000/api/infor/658cd6fcb1b3a0086cba0b9d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThjZDZjNmIxYjNhMDA4NmNiYTBiOWMiLCJpYXQiOjE3MDM3Mjg4Mzh9.SjIek6uogBkGQNN8UD3l7PLmZk9R5TxEFa9wMHVLfx4
